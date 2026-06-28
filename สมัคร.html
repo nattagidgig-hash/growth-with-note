@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สมัครเข้าร่วม — GROWTH WITH NOTE</title>
+<meta name="description" content="กรอกใบสมัครเข้าร่วมโครงการ GROWTH WITH NOTE เรียนดนตรีฟรีสำหรับเยาวชน โดย SAFETist Farm">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL,GRAD,opsz,wght@0,0,24,400" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16315f;--navy-d:#0e2244;--teal:#2f9e9e;--teal-d:#1f7f7f;
+    --orange:#ef7d2f;--orange-d:#d2641a;--green:#5cb24a;--green-d:#3f8a30;
+    --ink:#21303d;--ink2:#586774;--line:#dfe3da;--cream:#fbf9f3;--sage:#eef3ec;
+    --shadow:0 2px 6px rgba(22,49,95,.08),0 8px 24px rgba(22,49,95,.07);--r:18px;--r-sm:12px;--pill:999px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Sarabun',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.head{font-family:'Prompt',sans-serif;line-height:1.2}
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle}
+  a{color:var(--teal-d)}
+  .wrap{max-width:680px;margin:0 auto;padding:0 18px}
+
+  .top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .top-in{max-width:680px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:11px 18px}
+  .top img{height:30px;width:30px;border-radius:50%;object-fit:cover;border:1px solid var(--line);flex-shrink:0}
+  .top .lg{font-family:'Prompt';font-weight:800;color:var(--navy);font-size:16px}
+  .top .lg .n{color:var(--teal)}
+  .top a.back{margin-left:auto;font-family:'Prompt';font-weight:500;font-size:13.5px;color:var(--ink2);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+  .top a.back:hover{color:var(--navy)}
+
+  .hero{text-align:center;padding:38px 0 22px}
+  .hero .kick{display:inline-flex;align-items:center;gap:7px;font-family:'Prompt';font-weight:600;color:var(--orange-d);background:#fff4e0;border:1px solid #ffe0b8;padding:5px 14px;border-radius:var(--pill);font-size:13px;margin-bottom:14px}
+  .hero h1{font-size:clamp(28px,5.5vw,40px);color:var(--navy);font-weight:800}
+  .hero p{color:var(--ink2);font-size:16px;margin-top:10px}
+  .freechip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:#e9f3e1;color:var(--green-d);border:1px solid #d6e8c5;font-family:'Prompt';font-weight:600;padding:6px 16px;border-radius:var(--pill);font-size:14px}
+
+  form{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:28px;margin:14px 0 40px}
+  .grp{margin-bottom:20px}
+  .grp:last-of-type{margin-bottom:0}
+  label.q{display:block;font-family:'Prompt';font-weight:600;font-size:15.5px;color:var(--navy);margin-bottom:8px}
+  label.q .req{color:var(--orange-d)}
+  .hint{font-weight:400;color:var(--ink2);font-size:13px;font-family:'Sarabun'}
+  input[type=text],input[type=tel],input[type=number],textarea,select{
+    width:100%;font-family:'Sarabun';font-size:16px;color:var(--ink);background:var(--cream);
+    border:1.5px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;transition:.15s}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--teal);background:#fff;box-shadow:0 0 0 3px rgba(47,158,158,.15)}
+  textarea{resize:vertical;min-height:90px}
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opt{position:relative}
+  .opt input{position:absolute;opacity:0;width:0;height:0}
+  .opt label{display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--line);background:var(--cream);border-radius:var(--pill);padding:9px 16px;font-size:15px;cursor:pointer;transition:.15s;user-select:none}
+  .opt input:checked+label{border-color:var(--teal);background:#e6f4f3;color:var(--teal-d);font-weight:600}
+  .opt input:focus-visible+label{box-shadow:0 0 0 3px rgba(47,158,158,.25)}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .agree{display:flex;gap:11px;align-items:flex-start;background:var(--sage);border-radius:var(--r-sm);padding:14px 16px}
+  .agree input{margin-top:3px;width:18px;height:18px;accent-color:var(--teal);flex-shrink:0}
+  .agree label{font-size:15px;color:var(--ink)}
+  .submit{width:100%;margin-top:6px;font-family:'Prompt';font-weight:700;font-size:17px;color:#fff;background:var(--orange);border:none;border-radius:var(--pill);padding:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 6px 16px rgba(239,125,47,.32);transition:.15s}
+  .submit:hover{background:var(--orange-d)}
+  .submit:disabled{opacity:.6;cursor:not-allowed}
+  .formnote{font-size:13px;color:var(--ink2);text-align:center;margin-top:14px}
+  .alt{text-align:center;margin:6px 0 36px;color:var(--ink2);font-size:15px}
+  .alt b{color:var(--navy)}
+
+  /* success / error */
+  .msg{display:none;border-radius:var(--r);padding:30px 26px;text-align:center;margin:14px 0 40px;box-shadow:var(--shadow)}
+  .msg .material-symbols-outlined{font-size:54px}
+  .msg h2{font-size:24px;margin:10px 0 8px}
+  .msg p{font-size:16px;color:var(--ink2)}
+  .msg.ok{display:block;background:#f2faf4;border:1px solid #cdeccf}
+  .msg.ok .material-symbols-outlined{color:var(--green-d)} .msg.ok h2{color:var(--green-d)}
+  .msg.err{display:block;background:#fef5f3;border:1px solid #f6cdc4}
+  .msg.err .material-symbols-outlined{color:var(--orange-d)} .msg.err h2{color:var(--orange-d)}
+  .msg .btn{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-family:'Prompt';font-weight:600;background:var(--teal);color:#fff;text-decoration:none;border:none;cursor:pointer;padding:10px 20px;border-radius:var(--pill);font-size:15px}
+
+  footer{background:var(--navy-d);color:#9fb0c8;text-align:center;padding:24px;font-size:13.5px}
+  footer b{color:#fff}
+  @media(max-width:520px){.twocol{grid-template-columns:1fr}form{padding:22px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <img src="https://graph.facebook.com/safetistfarm/picture?type=square" alt="SAFETist" onerror="this.remove()">
+  <span class="lg">GROWTH WITH <span class="n">NOTE</span></span>
+  <a class="back" href="ประชาสัมพันธ์.html"><span class="material-symbols-outlined" style="font-size:18px">arrow_back</span> กลับหน้าโครงการ</a>
+</div></header>
+
+<div class="wrap">
+  <div class="hero">
+    <span class="kick"><span class="material-symbols-outlined" style="font-size:16px">how_to_reg</span> ใบสมัครออนไลน์</span>
+    <h1>สมัครเข้าร่วมโครงการ</h1>
+    <p>กรอกข้อมูลด้านล่าง ทีมงานจะติดต่อกลับเพื่อยืนยันสิทธิ์ · รับจำนวนจำกัด</p>
+    <div class="freechip"><span class="material-symbols-outlined" style="font-size:18px">redeem</span> เรียนฟรีตลอดโครงการ · ไม่ต้องมีพื้นฐาน</div>
+  </div>
+
+  <!-- success / error messages -->
+  <div id="okMsg" class="msg"><span class="material-symbols-outlined">task_alt</span>
+    <h2>ส่งใบสมัครเรียบร้อย!</h2>
+    <p>ขอบคุณที่สนใจเข้าร่วม GROWTH WITH NOTE ทีมงานจะติดต่อกลับโดยเร็วที่สุด</p>
+    <a class="btn" href="ประชาสัมพันธ์.html"><span class="material-symbols-outlined" style="font-size:19px">home</span> กลับหน้าโครงการ</a>
+  </div>
+  <div id="errMsg" class="msg"><span class="material-symbols-outlined">error</span>
+    <h2>ส่งไม่สำเร็จ</h2>
+    <p>ขออภัย เกิดข้อผิดพลาด ลองใหม่อีกครั้ง หรือทักมาที่ LINE @growthwithnote</p>
+    <button class="btn" type="button" onclick="document.getElementById('errMsg').classList.remove('err');document.getElementById('applyForm').style.display=''"><span class="material-symbols-outlined" style="font-size:19px">refresh</span> ลองอีกครั้ง</button>
+  </div>
+
+  <form id="applyForm" novalidate>
+    <input type="hidden" name="_subject" value="ใบสมัครใหม่ — GROWTH WITH NOTE">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="grp">
+      <label class="q" for="fname">ชื่อ-นามสกุล <span class="req">*</span></label>
+      <input id="fname" type="text" name="ชื่อ-นามสกุล" required>
+    </div>
+    <div class="twocol">
+      <div class="grp">
+        <label class="q" for="nick">ชื่อเล่น</label>
+        <input id="nick" type="text" name="ชื่อเล่น">
+      </div>
+      <div class="grp">
+        <label class="q" for="age">อายุ <span class="req">*</span></label>
+        <input id="age" type="number" name="อายุ" min="6" max="60" required>
+      </div>
+    </div>
+    <div class="grp">
+      <label class="q" for="school">ระดับชั้น / สถานศึกษา <span class="hint">(เช่น ม.4 / ปี 1 มหาวิทยาลัย...)</span></label>
+      <input id="school" type="text" name="ระดับชั้น-สถานศึกษา">
+    </div>
+    <div class="twocol">
+      <div class="grp">
+        <label class="q" for="phone">เบอร์โทรศัพท์ <span class="req">*</span></label>
+        <input id="phone" type="tel" name="เบอร์โทรศัพท์" required>
+      </div>
+      <div class="grp">
+        <label class="q" for="line">LINE ID หรืออีเมล</label>
+        <input id="line" type="text" name="LINE-หรืออีเมล">
+      </div>
+    </div>
+
+    <div class="grp">
+      <label class="q">เครื่องดนตรีที่สนใจ <span class="hint">(เลือกได้หลายอย่าง · ไม่แน่ใจก็ได้)</span></label>
+      <div class="opts">
+        <span class="opt"><input id="i1" type="checkbox" name="เครื่องที่สนใจ" value="กีตาร์"><label for="i1">กีตาร์</label></span>
+        <span class="opt"><input id="i2" type="checkbox" name="เครื่องที่สนใจ" value="เบส"><label for="i2">เบส</label></span>
+        <span class="opt"><input id="i3" type="checkbox" name="เครื่องที่สนใจ" value="คีย์บอร์ด"><label for="i3">คีย์บอร์ด</label></span>
+        <span class="opt"><input id="i4" type="checkbox" name="เครื่องที่สนใจ" value="กลอง"><label for="i4">กลอง</label></span>
+        <span class="opt"><input id="i5" type="checkbox" name="เครื่องที่สนใจ" value="ร้องเพลง"><label for="i5">ร้องเพลง</label></span>
+        <span class="opt"><input id="i6" type="checkbox" name="เครื่องที่สนใจ" value="ยังไม่แน่ใจ อยากลองทุกอย่าง"><label for="i6">ยังไม่แน่ใจ / อยากลองทุกอย่าง</label></span>
+      </div>
+    </div>
+
+    <div class="grp">
+      <label class="q">ประสบการณ์ดนตรี <span class="req">*</span></label>
+      <div class="opts">
+        <span class="opt"><input id="e1" type="radio" name="ประสบการณ์" value="ไม่เคยเล่นเลย" required><label for="e1">ไม่เคยเล่นเลย</label></span>
+        <span class="opt"><input id="e2" type="radio" name="ประสบการณ์" value="เคยเล่นบ้าง"><label for="e2">เคยเล่นบ้าง</label></span>
+        <span class="opt"><input id="e3" type="radio" name="ประสบการณ์" value="พอเล่นได้"><label for="e3">พอเล่นได้</label></span>
+      </div>
+    </div>
+
+    <div class="grp">
+      <label class="q">มาเรียนทุกวันเสาร์ 09.00–12.00 น. ได้สม่ำเสมอไหม <span class="req">*</span></label>
+      <div class="opts">
+        <span class="opt"><input id="c1" type="radio" name="มาเรียนสม่ำเสมอ" value="มาได้สม่ำเสมอ" required><label for="c1">มาได้สม่ำเสมอ</label></span>
+        <span class="opt"><input id="c2" type="radio" name="มาเรียนสม่ำเสมอ" value="ไม่แน่ใจ"><label for="c2">ไม่แน่ใจ / บางครั้ง</label></span>
+      </div>
+    </div>
+
+    <div class="grp">
+      <label class="q" for="why">ทำไมถึงอยากเข้าร่วม <span class="hint">(ไม่บังคับ เล่าสั้น ๆ ได้)</span></label>
+      <textarea id="why" name="เหตุผลที่อยากเข้าร่วม" placeholder="อยากลองเล่นดนตรี / ชอบเสียงดนตรี / อยากมีเพื่อน..."></textarea>
+    </div>
+
+    <div class="grp">
+      <label class="q" for="parent">ชื่อผู้ปกครอง + เบอร์ติดต่อ <span class="hint">(สำหรับผู้สมัครอายุต่ำกว่า 18 ปี)</span></label>
+      <input id="parent" type="text" name="ผู้ปกครอง-เบอร์ติดต่อ" placeholder="ชื่อ-นามสกุล / เบอร์โทร">
+    </div>
+
+    <div class="grp agree">
+      <input id="agree" type="checkbox" name="ยืนยัน" value="พร้อมเรียนต่อเนื่องตลอดโครงการ" required>
+      <label for="agree">ฉันพร้อมเข้าเรียนอย่างต่อเนื่องตลอดโครงการ และข้อมูลที่กรอกเป็นความจริง</label>
+    </div>
+
+    <button class="submit" type="submit" id="submitBtn"><span class="material-symbols-outlined">send</span> ส่งใบสมัคร</button>
+    <p class="formnote">เรียนฟรี ไม่มีค่าใช้จ่ายใด ๆ · ข้อมูลของคุณใช้สำหรับการรับสมัครเท่านั้น</p>
+  </form>
+
+  <p class="alt">หรือสมัคร/สอบถามผ่าน <b>LINE @growthwithnote</b> · โทร <b>xxx-xxx-xxxx</b></p>
+</div>
+
+<footer>จัดโดย <b>SAFETist Farm</b> · GROWTH WITH NOTE · ดนตรีคือการเติบโต</footer>
+
+<script>
+  document.querySelectorAll('.material-symbols-outlined').forEach(i=>i.setAttribute('aria-hidden','true'));
+  const form=document.getElementById('applyForm');
+  const btn=document.getElementById('submitBtn');
+  const ok=document.getElementById('okMsg');
+  const err=document.getElementById('errMsg');
+  // ↓↓↓ เปลี่ยนอีเมลผู้รับใบสมัครได้ที่บรรทัดนี้ ↓↓↓
+  const ENDPOINT='https://formsubmit.co/ajax/it.idea4u@gmail.com';
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    if(form._honey.value) return;              // honeypot — bot
+    if(!form.reportValidity()) return;
+    btn.disabled=true;btn.innerHTML='<span class="material-symbols-outlined">hourglass_top</span> กำลังส่ง...';
+    try{
+      const res=await fetch(ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
+      if(!res.ok) throw new Error('http '+res.status);
+      form.style.display='none';err.classList.remove('err');ok.classList.add('ok');
+      window.scrollTo({top:0,behavior:'smooth'});
+    }catch(_){
+      err.classList.add('err');btn.disabled=false;btn.innerHTML='<span class="material-symbols-outlined">send</span> ส่งใบสมัคร';
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+  });
+</script>
+</body>
+</html>
