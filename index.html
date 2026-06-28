@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GROWTH WITH NOTE</title>
+<meta name="description" content="โครงการดนตรีสร้างสรรค์สำหรับเยาวชน — GROWTH WITH NOTE โดย SAFETist Farm">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&family=Sarabun:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL,GRAD,opsz,wght@0,0,24,400" rel="stylesheet">
+<style>
+  :root{--navy:#16315f;--teal:#2f9e9e;--orange:#ef7d2f;--green:#5cb24a;--cream:#fbf9f3;--ink:#21303d;--ink2:#586774;--line:#e4e7df}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Sarabun',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;display:grid;place-items:center;padding:32px;line-height:1.6}
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle}
+  .box{max-width:680px;text-align:center}
+  .logo{width:84px;height:84px;border-radius:50%;object-fit:cover;border:1px solid var(--line);margin-bottom:18px}
+  .kicker{display:inline-flex;align-items:center;gap:7px;font-family:'Prompt';font-weight:600;color:var(--green);background:#e9f3e1;border:1px solid #d6e8c5;padding:5px 14px;border-radius:999px;font-size:13.5px;margin-bottom:18px}
+  h1{font-family:'Prompt';font-weight:800;color:var(--navy);font-size:clamp(36px,8vw,60px);line-height:1.05}
+  h1 .n{color:var(--teal)}
+  .tag{font-family:'Prompt';font-weight:600;color:var(--teal);font-size:clamp(16px,3vw,20px);margin:10px 0 6px;letter-spacing:.02em}
+  .sub{color:var(--ink2);font-size:16px;margin-bottom:34px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  a.card{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 24px;box-shadow:0 2px 6px rgba(22,49,95,.08);transition:.18s;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink)}
+  a.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(22,49,95,.13)}
+  a.card .ic{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;color:#fff;margin-bottom:6px}
+  a.card.apply .ic{background:var(--orange)} a.card.present .ic{background:var(--navy)}
+  a.card .ic .material-symbols-outlined{font-size:32px}
+  a.card h2{font-family:'Prompt';font-weight:600;font-size:21px;color:var(--navy)}
+  a.card p{font-size:14.5px;color:var(--ink2)}
+  a.card .go{margin-top:8px;font-family:'Prompt';font-weight:600;font-size:14px;color:var(--teal);display:inline-flex;align-items:center;gap:5px}
+  .credit{margin-top:30px;font-size:13.5px;color:var(--ink2);display:inline-flex;align-items:center;gap:6px}
+  .credit img{height:22px;width:22px;border-radius:5px;object-fit:cover;border:1px solid var(--line)}
+  .credit b{color:var(--navy)}
+</style>
+</head>
+<body>
+  <div class="box">
+    <img class="logo" src="https://graph.facebook.com/safetistfarm/picture?type=large" alt="SAFETist" onerror="this.remove()">
+    <div class="kicker"><span class="material-symbols-outlined" style="font-size:17px">eco</span> ดนตรีคือการเติบโต</div>
+    <h1>GROWTH WITH <span class="n">NOTE</span></h1>
+    <div class="tag">คิด • สร้าง • เล่น • เป็นทีม</div>
+    <p class="sub">โครงการดนตรีสร้างสรรค์สำหรับเยาวชน เรียนดนตรีจากศูนย์สู่เวทีแสดงสด</p>
+    <div class="cards">
+      <a class="card apply" href="ประชาสัมพันธ์.html">
+        <div class="ic"><span class="material-symbols-outlined">how_to_reg</span></div>
+        <h2>หน้ารับสมัคร</h2>
+        <p>รายละเอียดโครงการ &amp; สมัครเข้าร่วม</p>
+        <span class="go">เปิดดู <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></span>
+      </a>
+      <a class="card present" href="นำเสนอโครงการ.html">
+        <div class="ic"><span class="material-symbols-outlined">slideshow</span></div>
+        <h2>หน้านำเสนอโครงการ</h2>
+        <p>แนวคิด หลักสูตร ทีมงาน งบประมาณ</p>
+        <span class="go">เปิดดู <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></span>
+      </a>
+    </div>
+    <p class="credit">จัดโดย <img src="https://graph.facebook.com/safetistfarm/picture?type=square" alt="" onerror="this.remove()"> <b>SAFETist Farm</b> · ริมคลองบางมด ทุ่งครุ</p>
+  </div>
+  <script>document.querySelectorAll('.material-symbols-outlined').forEach(i=>i.setAttribute('aria-hidden','true'));</script>
+</body>
+</html>
